@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFEEDE">
+    <meta name="description" content="Freshly baked cakes, crinkles, cookies, and sweet breads from Purrfectly Bakes in Rizal.">
+    <title>Purrfectly Bakes | Freshly Baked with Love</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- All visual styling is kept in the external style.css file. -->
+
+
+</head>
+<body>
+    <!-- TOP ANNOUNCEMENT BAR: short store update shown above the navigation. -->
+    <div class="top-header">
+        <h1>• Fresh Daily Bakes in Angono &amp; Binangonan ✨</h1>
+    </div>
+
+    <!-- MAIN HEADER: brand logo, navigation links, social icons, cart, and login. -->
+    <header class="mid-header" id="home">
+        <div class="Brand">
+            <a href="#home"><img src="pictures/logo.jpg" alt="Purrfectly Bakes Logo" class="logo"></a>
+            <h1><a href="#home">Purrfectly Bakes</a></h1>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <a href="#menu-section">Cakes &amp; Bakes</a>
+            <a href="#Menu">Menu</a>
+            <a href="#maps">Find Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="header-icons">
+                <a href="https://www.instagram.com/purrfectlybakes_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="pictures/instagram.jpg" alt="">
+                </a>
+                <a href="#image" aria-label="View bakery photos"><img src="pictures/camera.jpg" alt=""></a>
+                <a href="#contact" aria-label="Contact us"><img src="pictures/Contact.jpg" alt=""></a>
+            </div>
+
+            <button type="button" class="cart-trigger" id="open-cart">
+                🛒 My Cart <span id="cart-count">(0)</span>
+            </button>
+
+            <!-- LOGIN BUTTON -->
+            <div class="Login">
+                <a href="#login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: introduces the bakery and highlights its main features. -->
+        <section class="Content">
+            <div class="CContent">
+                <p class="eyebrow">BAKED FRESH • MADE WITH LOVE</p>
+                <h1>Purrfectly Bakes</h1>
+                <h2>Purrfect in every bite</h2>
+                <p>Handcrafted artisan sourdough, buttery flaky croissants, decadent celebration cakes, and melt-in-your-mouth pastries baked fresh daily in the heart of Rizal.</p>
+
+                <div class="Content-features">
+                    <div class="feature"><span>◷</span><div><small>Fresh Daily Batches</small><h4>Small Batch Craft</h4></div></div>
+                    <div class="feature"><span>♧</span><div><small>Lalamove /</small><h4>Self Pick-up</h4></div></div>
+                    <div class="feature"><span>⌖</span><div><small>Location</small><h4>Angono Rizal</h4></div></div>
+                </div>
+                <a href="#menu-section" class="Content-button">Explore Our Bakes <span>→</span></a>
+            </div>
+
+            <div class="Content-image" id="image" aria-label="Purrfectly Bakes featured products">
+                <div class="slides">
+                    <div class="slide"><img src="pictures/Banner.jpg" alt="Featured cake"></div>
+                    <div class="slide"><img src="pictures/Banners.jpg" alt="Fresh pastries"></div>
+                    <div class="slide"><img src="pictures/Bannerss.jpg" alt="Cookies and treats"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATEGORY 1: celebration cakes and cupcakes. -->
+        <section class="menu-section catalog-section" id="menu-section">
+            <div class="section-heading">
+                <p class="eyebrow">MADE TO MAKE YOU SMILE</p>
+                <h2>Our Cakes</h2>
+                <p>Celebrate life's sweetest moments with our freshly made cakes.</p>
+            </div>
+            <div class="product-container">
+                <article class="product-card" data-name="Cake (6 × 4)" data-price="879" data-description="Our classic celebration cake. Price starts at ₱879; final pricing may depend on design and customization.">
+                    <div class="product-image"><img src="pictures/Cakes/6x4.png" alt="Cake 6 by 4"></div>
+                    <div class="product-info"><h3>Cake (6 × 4)</h3><p>Price starts at</p><h4>₱879</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Cake (7 × 4)" data-price="1199" data-description="A bigger celebration cake for sharing. Price starts at ₱1,199; final pricing may depend on design and customization.">
+                    <div class="product-image"><img src="pictures/Cakes/7x4.png" alt="Cake 7 by 4"></div>
+                    <div class="product-info"><h3>Cake (7 × 4)</h3><p>Price starts at</p><h4>₱1,199</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Bento Cake" data-price="349" data-description="A petite cake that's perfect for intimate celebrations and sweet surprises.">
+                    <div class="product-image"><img src="pictures/Cakes/Bento.png" alt="Bento Cake"></div>
+                    <div class="product-info"><h3>Bento Cake</h3><p>Price starts at</p><h4>₱349</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="1 Dozen Cupcakes (3oz)" data-price="799" data-description="A dozen freshly made cupcakes, perfect for sharing.">
+                    <div class="product-image"><img src="pictures/Cakes/dozen.jpg" alt="A dozen cupcakes"></div>
+                    <div class="product-info"><h3>1 Dozen Cupcakes (3oz)</h3><p>Price starts at</p><h4>₱799</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATEGORY 2: crinkles with cream cheese. -->
+        <section class="menu-section catalog-section alt-section" id="Menu">
+            <div class="section-heading">
+                <p class="eyebrow">SOFT, FUDGY &amp; DELICIOUS</p>
+                <h2>Crinkles w/ Creamcheese</h2>
+                <p>Rich crinkles made for your sweet cravings.</p>
+            </div>
+            <div class="product-container">
+                <article class="product-card" data-name="Chocolate Crinkles" data-price="175" data-description="Rich chocolate crinkles with creamcheese. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Crinkles/Dipdak.jpg" alt="Chocolate Crinkles"></div>
+                    <div class="product-info"><h3>Chocolate Crinkles</h3><p>Per loaf</p><h4>₱175</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Red Velvet Crinkles" data-price="210" data-description="Soft red velvet crinkles with creamcheese. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Crinkles/Velveit.jpg" alt="Red Velvet Crinkles"></div>
+                    <div class="product-info"><h3>Red Velvet Crinkles</h3><p>Per loaf</p><h4>₱210</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Ube Crinkles" data-price="185" data-description="Ube-flavored crinkles with creamcheese. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Crinkles/ubers.jpg" alt="Ube Crinkles"></div>
+                    <div class="product-info"><h3>Ube Crinkles</h3><p>Per loaf</p><h4>₱185</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Matcha Crinkles" data-price="235" data-description="Matcha crinkles with creamcheese. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Crinkles/Matcho.jpg" alt="Matcha Crinkles"></div>
+                    <div class="product-info"><h3>Matcha Crinkles</h3><p>Per loaf</p><h4>₱235</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATEGORY 3: cookies and other sweet treats. -->
+        <section class="menu-section catalog-section" id="treats">
+            <div class="section-heading">
+                <p class="eyebrow">A LITTLE SOMETHING SWEET</p>
+                <h2>Cookies &amp; Treats</h2>
+                <p>Delightful treats for your everyday snack break.</p>
+            </div>
+            <div class="product-container">
+                <article class="product-card" data-name="Walnut Chocolate Cookies" data-price="210" data-description="Chocolate cookies with walnuts. Box of 4.">
+                    <div class="product-image"><img src="pictures/Corkies/Nutts.jpg" alt="Walnut Chocolate Cookies"></div>
+                    <div class="product-info"><h3>Walnut Chocolate Cookies</h3><p>Box of 4</p><h4>₱210</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Oreo Redvelvet Cookies" data-price="210" data-description="Oreo red velvet cookies. Box of 4.">
+                    <div class="product-image"><img src="pictures/Corkies/Orie.jpg" alt="Oreo Redvelvet Cookies"></div>
+                    <div class="product-info"><h3>Oreo Redvelvet Cookies</h3><p>Box of 4</p><h4>₱210</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Chocolate Brownies" data-price="210" data-description="Rich chocolate brownies. Sold per order.">
+                    <div class="product-image"><img src="pictures/Corkies/Brownd.jpg" alt="Chocolate Brownies"></div>
+                    <div class="product-info"><h3>Chocolate Brownies</h3><p>Per order</p><h4>₱210</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Classic Tiramisu" data-price="180" data-description="Classic tiramisu dessert. Sold per tub.">
+                    <div class="product-image"><img src="pictures/Corkies/clas.jpg" alt="Classic Tiramisu"></div>
+                    <div class="product-info"><h3>Classic Tiramisu</h3><p>Per tub</p><h4>₱180</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATEGORY 4: freshly baked sweet breads. -->
+        <section class="menu-section catalog-section alt-section" id="sweet-breads">
+            <div class="section-heading">
+                <p class="eyebrow">FRESH FROM OUR OVEN</p>
+                <h2>Sweet Breads</h2>
+                <p>Comforting baked favorites for any time of day.</p>
+            </div>
+            <div class="product-container">
+                <article class="product-card" data-name="Banana Loaf" data-price="180" data-description="Moist and comforting banana loaf. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Breads/loaf.jpg" alt="Banana Loaf"></div>
+                    <div class="product-info"><h3>Banana Loaf</h3><p>Per loaf</p><h4>₱180</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Cinnamon Roll" data-price="180" data-description="Sweet cinnamon bread. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Breads/Cin.jpg" alt="Cinnamon Roll"></div>
+                    <div class="product-info"><h3>Cinnamon Roll</h3><p>Per loaf</p><h4>₱180</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Creamcheese Ensymada" data-price="250" data-description="Soft ensymada topped with creamcheese. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Breads/Plain.jpg" alt="Creamcheese Ensymada"></div>
+                    <div class="product-info"><h3>Creamcheese Ensymada</h3><p>Per loaf</p><h4>₱250</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+                <article class="product-card" data-name="Ube Creamcheese Ensymada" data-price="270" data-description="Ube ensymada topped with creamcheese. Sold per loaf.">
+                    <div class="product-image"><img src="pictures/Breads/Ubier.jpg" alt="Ube Creamcheese Ensymada"></div>
+                    <div class="product-info"><h3>Ube Creamcheese Ensymada</h3><p>Per loaf</p><h4>₱270</h4><button type="button" class="add-button">Add to Cart</button></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- LOCATION SECTION: store information and embedded Google Map. -->
+        <section class="store-section" id="maps">
+            <div class="store-info">
+                <p class="eyebrow">COME SAY HELLO</p>
+                <h2>Find Us at our Pop-Up Store</h2>
+                <p>Visit us at Aurora Overlooking, near Vista Cafe in Angono, Rizal. Our pop-up store is located in a scenic and accessible area, making it a great place to stop by and explore. You can use Google Maps for directions and to find the exact location. We look forward to seeing you!</p>
+                <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Aurora+Overlooking+Angono+Rizal" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15448.230544791286!2d121.14919506479725!3d14.53869587504413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c6d9e2934acf%3A0x7d5acda3dcf02e4a!2sAngono%2C%201930%20Rizal!5e0!3m2!1sen!2sph!4v1792899630427!5m2!1sen!2sph" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Purrfectly Bakes Store Location"></iframe>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION: the story behind the Purrfectly Bakes name. -->
+        <section class="StoryContent" id="about">
+            <div class="StoryDetails">
+                <p class="eyebrow">THE PEOPLE BEHIND THE BAKES</p>
+                <h2>Our Purrfect Story</h2>
+                <p>Purrfectly Bakes was inspired by us, the fur moms behind the business! I'm a proud dog lover, while my business partner is a cat lover. Our love for our furry companions inspired us to create the name "Purrfectly Bakes," reflecting our personalities and passion for baking.</p>
+                <p>The business originally started as a college entrepreneurship project. We began with just one product: banana loaf. At first, it was only a side hustle while we were studying and exploring our passion for baking.</p>
+                <p>Last year, we decided to take a big risk and turn our small side business into a full-time venture. Thankfully, Purrfectly Bakes is still running today! We're grateful for the journey, the support, and every customer who has been part of our story. We hope to continue growing and sharing our baked goods with more people! 🐶🐱💗</p>
+            </div>
+            <div class="StoryImages">
+                <img src="pictures/dog1.jpg" alt="Owner's dogs">
+                <img src="pictures/cat1.jpg" alt="Business partner's cats">
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION: directs customers to the bakery Instagram page. -->
+        <section class="contact-section" id="contact">
+            <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+            <h2>Have a sweet question?</h2>
+            <p>Message us on Instagram for inquiries, product details, and orders.</p>
+            <a href="https://www.instagram.com/purrfectlybakes_/" target="_blank" rel="noopener noreferrer">Visit Our Instagram ↗</a>
+        </section>
+    </main>
+
+    <!-- FOOTER: compact brand details and pop-up store schedule. -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h3 class="footer-logo"><span class="paw">🐾</span> Purrfectly Bakes</h3>
+                <p class="footer-description">Freshly baked happiness, made with love. From celebration cakes to your favorite sweet treats, every bite is baked to make your day purrfect!</p>
+                <div class="footer-location"><span class="store-icon">⌖</span><span>Angono &amp; Binangonan, Rizal</span></div>
+            </div>
+            <div class="footer-right">
+                <h3>Pop-up Store Hours</h3>
+                <p class="footer-days">Friday - Sunday</p>
+                <p class="footer-time">6:00 PM - 12:00 AM</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Purrfectly Bakes. Baked with love. 🐾</p>
+    </footer>
+
+
+    <!-- ACCOUNT POPUPS: CSS :target opens these panels without JavaScript. -->
+    <!-- ================= LOGIN ================= -->
+    <div id="login" class="account-modal">
+        <div class="account-content">
+            <img class="account-logo" src="pictures/logo.jpg" alt="Purrfectly Bakes Logo">
+            <h2>Welcome Back!</h2>
+
+            <form action="#Welcome">
+                <div class="account-input-group">
+                    <input type="email" id="login-email" required>
+                    <label for="login-email">Email*</label>
+                </div>
+                <div class="account-input-group">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password">Password*</label>
+                </div>
+                <button class="account-yellow-button" type="submit">LOG IN</button>
+            </form>
+
+            <a href="#" class="account-close" aria-label="Close login">&times;</a>
+            <p class="account-terms">By continuing, you agree to our Terms of Service and Privacy Policy.<br>
+                New here? <a href="#signin">Create Account</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- LOGIN WELCOME -->
+    <div id="Welcome" class="account-welcome">
+        <div class="account-welcome-content">
+            <h1>Welcome Back!</h1>
+            <p>We are happy to see you again!</p>
+            <a href="#" class="account-close" aria-label="Close welcome">&times;</a>
+        </div>
+    </div>
+
+    <!-- ================= SIGN IN ================= -->
+    <div id="signin" class="account-modal">
+        <div class="account-content">
+            <img class="account-logo" src="pictures/logo.jpg" alt="Purrfectly Bakes Logo">
+            <h2>Create Account</h2>
+
+            <form action="#welcome">
+                <div class="account-input-group">
+                    <input type="text" id="signup-firstname" required>
+                    <label for="signup-firstname">Firstname</label>
+                </div>
+                <div class="account-input-group">
+                    <input type="text" id="signup-lastname" required>
+                    <label for="signup-lastname">Lastname</label>
+                </div>
+                <div class="account-input-group">
+                    <input type="email" id="signup-email" required>
+                    <label for="signup-email">Email*</label>
+                </div>
+                <div class="account-input-group">
+                    <input type="password" id="signup-password" required>
+                    <label for="signup-password">Password*</label>
+                </div>
+                <button class="account-yellow-button" type="submit">SIGN IN</button>
+            </form>
+
+            <a href="#" class="account-close" aria-label="Close sign in">&times;</a>
+            <p class="account-terms">By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+            <p class="account-switch">Already have an account? <a href="#login">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- SIGN IN WELCOME -->
+    <div id="welcome" class="account-welcome">
+        <div class="account-welcome-content">
+            <h1>Welcome!</h1>
+            <p>Are you ready to select your own Purrfectly Bakes?</p>
+            <a href="#" class="account-close" aria-label="Close welcome">&times;</a>
+        </div>
+    </div>
+
+    <!-- SHOPPING INTERFACE MARKUP: these controls are visual only without JavaScript. -->
+    <!-- Reusable product details popup -->
+    <div class="modal-backdrop" id="product-backdrop"></div>
+    <section id="product-modal" class="popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-product-name">
+        <button type="button" class="modal-close" id="close-product" aria-label="Close product details">×</button>
+        <div class="product-modal-content">
+            <img id="modal-product-image" src="" alt="">
+            <div class="product-modal-info">
+                <p class="eyebrow">PURRFECTLY BAKES</p>
+                <h2 id="modal-product-name">Product name</h2>
+                <p class="modal-price">₱<span id="modal-product-price">0</span></p>
+                <p id="modal-product-description" class="modal-description"></p>
+                <p class="allergen-note">For the exact ingredient list and allergen information, please message us on Instagram before ordering.</p>
+                <button type="button" id="modal-add-to-cart" class="primary-button">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping cart popup -->
+    <section id="cart" class="popup cart-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cart-title">
+        <button type="button" class="modal-close" id="close-cart" aria-label="Close cart">×</button>
+        <p class="eyebrow">YOUR SWEET SELECTION</p>
+        <h2 id="cart-title">My Cart <span class="cart-heading-count" id="cart-heading-count">(0 items)</span></h2>
+        <div id="cart-items"><p class="empty-cart">Your cart is currently empty. Add something sweet!</p></div>
+        <div class="cart-summary">
+            <div><span>Subtotal</span><strong>₱<span id="cart-total">0</span></strong></div>
+            <small>Delivery fee, if applicable, will be confirmed by the shop.</small>
+            <button type="button" id="checkout-button" class="primary-button" disabled>Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <!-- Checkout screen -->
+    <section id="checkout" class="popup checkout-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="checkout-title">
+        <button type="button" class="modal-close" id="close-checkout" aria-label="Close checkout">×</button>
+        <p class="eyebrow">ALMOST THERE!</p>
+        <h2 id="checkout-title">Complete Your Order</h2>
+        <p class="checkout-intro">Please provide your details so we can prepare your freshly baked treats.</p>
+
+        <form id="checkout-form">
+            <div class="checkout-section">
+                <h3>1. Customer Information</h3>
+                <div class="checkout-grid">
+                    <label>Full Name *<input id="customer-name" name="customerName" type="text" autocomplete="name" placeholder="Your complete name" required></label>
+                    <label>Mobile Number *<input id="customer-phone" name="customerPhone" type="tel" autocomplete="tel" placeholder="09XXXXXXXXX" pattern="09[0-9]{9}" title="Enter an 11-digit Philippine mobile number starting with 09." required></label>
+                    <label class="full-field">Email Address (optional)<input id="customer-email" name="customerEmail" type="email" autocomplete="email" placeholder="you@example.com"></label>
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <h3>2. Delivery Method</h3>
+                <div class="choice-row">
+                    <label class="choice-card"><input type="radio" name="fulfillment" value="Self Pickup" checked> <span><strong>Self Pickup</strong><small>Pick up your order at our agreed location.</small></span></label>
+                    <label class="choice-card"><input type="radio" name="fulfillment" value="Delivery"> <span><strong>Delivery</strong><small>Have your order delivered to your address.</small></span></label>
+                </div>
+                <div id="delivery-fields" class="checkout-grid" hidden>
+                    <label class="full-field">Complete Delivery Address *<textarea id="customer-address" rows="2" placeholder="House/Unit No., Street, Barangay, City/Municipality"></textarea></label>
+                    <label class="full-field">Landmark / Delivery Instructions<input id="customer-landmark" type="text" placeholder="Nearby landmark, gate color, etc."></label>
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <h3>3. Preferred Schedule</h3>
+                <div class="checkout-grid">
+                    <label>Preferred Date *<input id="order-date" type="date" required></label>
+                    <label>Preferred Time *<select id="order-time" required><option value="">Choose a time</option><option>9:00 AM – 11:00 AM</option><option>11:00 AM – 1:00 PM</option><option>1:00 PM – 3:00 PM</option><option>3:00 PM – 5:00 PM</option><option>5:00 PM – 7:00 PM</option></select></label>
+                </div>
+                <small class="checkout-hint">Your requested schedule is subject to availability. We will confirm it through Instagram.</small>
+            </div>
+
+            <div class="checkout-section">
+                <h3>4. Payment Method</h3>
+                <div class="payment-options">
+                    <label class="choice-card"><input type="radio" name="payment" value="GCash" required><span><strong>GCash</strong><small>E-wallet payment</small></span></label>
+                    <label class="choice-card"><input type="radio" name="payment" value="Maya"><span><strong>Maya</strong><small>E-wallet payment</small></span></label>
+                    <label class="choice-card"><input type="radio" name="payment" value="Cash on Pickup/Delivery"><span><strong>Cash</strong><small>Pay when you receive your order</small></span></label>
+                </div>
+                <p class="payment-note">For GCash or Maya, payment details and instructions will be provided by Purrfectly Bakes after your order is confirmed. Please do not send payment yet.</p>
+            </div>
+
+            <div class="checkout-section">
+                <label class="full-field">Order Notes / Cake Design / Special Requests<textarea id="order-notes" rows="3" placeholder="Write your preferred flavor, design, message on cake, or other requests here."></textarea></label>
+            </div>
+
+            <div class="checkout-total"><span>Merchandise Subtotal</span><strong>₱<span id="checkout-total">0</span></strong></div>
+            <p class="checkout-hint">Delivery fee and custom design charges, if any, will be confirmed by the shop before payment.</p>
+            <button type="submit" class="primary-button">Review My Order</button>
+        </form>
+
+        <div id="order-review" class="order-review" hidden>
+            <h3>Review Your Order</h3>
+            <p>Please check your details before sending your order inquiry.</p>
+            <pre id="order-review-text"></pre>
+            <button type="button" id="send-order-button" class="primary-button">Copy Order Details &amp; Open Instagram</button>
+            <button type="button" id="edit-order-button" class="secondary-button">Go Back &amp; Edit</button>
+        </div>
+        <div id="order-success" class="order-success" hidden>
+            <div class="success-mark">✓</div>
+            <h3>Order Details Ready!</h3>
+            <p>Your order summary has been prepared. Send it to Purrfectly Bakes on Instagram so the shop can confirm availability, delivery fee, and payment instructions.</p>
+            <button type="button" id="finish-order-button" class="primary-button">Done</button>
+        </div>
+    </section>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+// ============================================
+// PURRFECTLY BAKES - PRODUCT DETAILS & CART
+// ============================================
+
+// The cart array stores products and quantities while this page is open.
+const cart = [];
+let selectedProduct = null;
+let toastTimer;
+
+// Get the popup and cart elements from the HTML.
+const cartPopup = document.getElementById("cart");
+const productPopup = document.getElementById("product-modal");
+const backdrop = document.getElementById("product-backdrop");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const cartCount = document.getElementById("cart-count");
+const cartHeadingCount = document.getElementById("cart-heading-count");
+const toast = document.getElementById("toast");
+
+// Format numbers as Philippine peso amounts.
+function formatPrice(amount) {
+    return amount.toLocaleString("en-PH");
+}
+
+// Read the product information from a product card.
+function getProductFromCard(card) {
+    const image = card.querySelector(".product-image img");
+
+    return {
+        name: card.dataset.name,
+        price: Number(card.dataset.price),
+        image: image ? image.getAttribute("src") : "",
+        description: card.dataset.description || "Freshly prepared by Purrfectly Bakes."
+    };
+}
+
+// Show a small confirmation message.
+function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+}
+
+// Open or close the shared backdrop.
+function showBackdrop() {
+    backdrop.classList.add("is-visible");
+}
+
+function hideBackdropIfNoPopup() {
+    const productIsOpen = productPopup.classList.contains("is-open");
+    const cartIsOpen = cartPopup.classList.contains("is-open");
+    const checkoutIsOpen = document.getElementById("checkout").classList.contains("is-open");
+
+    if (!productIsOpen && !cartIsOpen && !checkoutIsOpen) {
+        backdrop.classList.remove("is-visible");
+    }
+}
+
+// PRODUCT DETAILS POPUP
+function openProductDetails(product) {
+    selectedProduct = product;
+
+    document.getElementById("modal-product-image").src = product.image;
+    document.getElementById("modal-product-image").alt = product.name;
+    document.getElementById("modal-product-name").textContent = product.name;
+    document.getElementById("modal-product-price").textContent = formatPrice(product.price);
+    document.getElementById("modal-product-description").textContent = product.description;
+
+    productPopup.classList.add("is-open");
+    productPopup.setAttribute("aria-hidden", "false");
+    showBackdrop();
+}
+
+function closeProductDetails() {
+    productPopup.classList.remove("is-open");
+    productPopup.setAttribute("aria-hidden", "true");
+    hideBackdropIfNoPopup();
+}
+
+// SHOPPING CART
+function openCart() {
+    cartPopup.classList.add("is-open");
+    cartPopup.setAttribute("aria-hidden", "false");
+    showBackdrop();
+}
+
+function closeCart() {
+    cartPopup.classList.remove("is-open");
+    cartPopup.setAttribute("aria-hidden", "true");
+    hideBackdropIfNoPopup();
+}
+
+// Add a product, or increase its quantity if it is already in the cart.
+function addToCart(product) {
+    const existingItem = cart.find(item => item.name === product.name);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 1
+        });
+    }
+
+    renderCart();
+    showToast(`${product.name} added to your cart!`);
+    openCart();
+}
+
+// Update quantity. If it reaches zero, remove the product.
+function changeQuantity(index, amount) {
+    if (!cart[index]) return;
+
+    cart[index].quantity += amount;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+
+    renderCart();
+}
+
+// Remove a product completely.
+function removeItem(index) {
+    cart.splice(index, 1);
+    renderCart();
+    showToast("Item removed from your cart.");
+}
+
+// Build the cart display again after every change.
+function renderCart() {
+    cartItems.replaceChildren();
+
+    let total = 0;
+    let quantityTotal = 0;
+
+    if (cart.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.className = "empty-cart";
+        emptyMessage.textContent = "Your cart is currently empty. Add something sweet!";
+        cartItems.appendChild(emptyMessage);
+    }
+
+    cart.forEach((item, index) => {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+        quantityTotal += item.quantity;
+
+        const row = document.createElement("article");
+        row.className = "cart-item";
+
+        const image = document.createElement("img");
+        image.className = "cart-item-image";
+        image.src = item.image;
+        image.alt = item.name;
+
+        const details = document.createElement("div");
+        details.className = "cart-item-details";
+
+        const name = document.createElement("strong");
+        name.textContent = item.name;
+
+        const unitPrice = document.createElement("p");
+        unitPrice.textContent = `₱${formatPrice(item.price)} each`;
+
+        const subtotalText = document.createElement("p");
+        subtotalText.className = "cart-subtotal";
+        subtotalText.textContent = `Subtotal: ₱${formatPrice(subtotal)}`;
+
+        details.append(name, unitPrice, subtotalText);
+
+        const controls = document.createElement("div");
+        controls.className = "quantity-controls";
+
+        const minus = document.createElement("button");
+        minus.type = "button";
+        minus.textContent = "−";
+        minus.setAttribute("aria-label", `Decrease ${item.name} quantity`);
+        minus.addEventListener("click", () => changeQuantity(index, -1));
+
+        const quantity = document.createElement("span");
+        quantity.textContent = item.quantity;
+
+        const plus = document.createElement("button");
+        plus.type = "button";
+        plus.textContent = "+";
+        plus.setAttribute("aria-label", `Increase ${item.name} quantity`);
+        plus.addEventListener("click", () => changeQuantity(index, 1));
+
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "remove-item";
+        remove.textContent = "Remove";
+        remove.addEventListener("click", () => removeItem(index));
+
+        controls.append(minus, quantity, plus, remove);
+        row.append(image, details, controls);
+        cartItems.appendChild(row);
+    });
+
+    cartTotal.textContent = formatPrice(total);
+    cartCount.textContent = `(${quantityTotal})`;
+    cartHeadingCount.textContent = `(${quantityTotal} ${quantityTotal === 1 ? "item" : "items"})`;
+
+    document.getElementById("checkout-button").disabled = cart.length === 0;
+}
+
+// Connect every product card, regardless of its category.
+document.querySelectorAll(".product-card").forEach(card => {
+    const product = getProductFromCard(card);
+    const addButton = card.querySelector(".add-button");
+
+    // Clicking the card opens product information.
+    card.addEventListener("click", event => {
+        if (event.target.closest("button")) return;
+        openProductDetails(product);
+    });
+
+    // Clicking Add to Cart adds it directly.
+    addButton.addEventListener("click", event => {
+        event.stopPropagation();
+        addToCart(product);
+    });
+});
+
+// Add the product currently shown in the details popup.
+document.getElementById("modal-add-to-cart").addEventListener("click", () => {
+    if (!selectedProduct) return;
+
+    addToCart(selectedProduct);
+    closeProductDetails();
+});
+
+// Header cart and close buttons.
+document.getElementById("open-cart").addEventListener("click", openCart);
+document.getElementById("close-cart").addEventListener("click", closeCart);
+document.getElementById("close-product").addEventListener("click", closeProductDetails);
+
+// Clicking the shaded background closes the open popup.
+backdrop.addEventListener("click", () => {
+    closeProductDetails();
+    closeCart();
+    closeCheckout();
+});
+
+// Escape key closes popups.
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeProductDetails();
+        closeCart();
+        closeCheckout();
+    }
+});
+
+// CHECKOUT FLOW — collects details and prepares an order message.
+const checkoutPopup = document.getElementById("checkout");
+const checkoutForm = document.getElementById("checkout-form");
+const deliveryFields = document.getElementById("delivery-fields");
+const deliveryAddress = document.getElementById("customer-address");
+let preparedOrderMessage = "";
+
+function openCheckout() {
+    if (cart.length === 0) return;
+    closeCart();
+    document.getElementById("checkout-total").textContent = formatPrice(
+        cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
+    );
+    document.getElementById("order-date").min = new Date().toISOString().split("T")[0];
+    checkoutForm.hidden = false;
+    document.getElementById("order-review").hidden = true;
+    document.getElementById("order-success").hidden = true;
+    checkoutPopup.classList.add("is-open");
+    checkoutPopup.setAttribute("aria-hidden", "false");
+    showBackdrop();
+}
+
+function closeCheckout() {
+    checkoutPopup.classList.remove("is-open");
+    checkoutPopup.setAttribute("aria-hidden", "true");
+    hideBackdropIfNoPopup();
+}
+
+document.getElementById("checkout-button").addEventListener("click", openCheckout);
+document.getElementById("close-checkout").addEventListener("click", closeCheckout);
+
+document.querySelectorAll('input[name="fulfillment"]').forEach(option => {
+    option.addEventListener("change", () => {
+        const isDelivery = document.querySelector('input[name="fulfillment"]:checked').value === "Delivery";
+        deliveryFields.hidden = !isDelivery;
+        deliveryAddress.required = isDelivery;
+    });
+});
+
+checkoutForm.addEventListener("submit", event => {
+    event.preventDefault();
+    if (cart.length === 0) return;
+
+    const fulfillment = document.querySelector('input[name="fulfillment"]:checked').value;
+    const payment = document.querySelector('input[name="payment"]:checked');
+    if (!payment) {
+        showToast("Please choose a payment method.");
+        return;
+    }
+
+    const customer = document.getElementById("customer-name").value.trim();
+    const phone = document.getElementById("customer-phone").value.trim();
+    const email = document.getElementById("customer-email").value.trim();
+    const date = document.getElementById("order-date").value;
+    const time = document.getElementById("order-time").value;
+    const address = deliveryAddress.value.trim();
+    const landmark = document.getElementById("customer-landmark").value.trim();
+    const notes = document.getElementById("order-notes").value.trim();
+    const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const orderLines = cart.map(item => `• ${item.name} x${item.quantity} — ₱${formatPrice(item.price * item.quantity)}`);
+
+    preparedOrderMessage = [
+        "Hello, Purrfectly Bakes! I would like to place/inquire about this order.",
+        "", "CUSTOMER DETAILS", `Name: ${customer}`, `Mobile: ${phone}`,
+        ...(email ? [`Email: ${email}`] : []),
+        "", "ORDER", ...orderLines, `Subtotal: ₱${formatPrice(subtotal)}`,
+        "", "FULFILLMENT", `Method: ${fulfillment}`,
+        ...(fulfillment === "Delivery" ? [`Address: ${address}`, ...(landmark ? [`Landmark/Instructions: ${landmark}`] : [])] : []),
+        `Preferred date: ${date}`, `Preferred time: ${time}`,
+        "", "PAYMENT", `Preferred method: ${payment.value}`,
+        "", ...(notes ? [`SPECIAL REQUESTS: ${notes}`, ""] : []),
+        "Please confirm product availability, final price, schedule, delivery fee (if applicable), and payment instructions. Thank you!"
+    ].join("\n");
+
+    document.getElementById("order-review-text").textContent = preparedOrderMessage;
+    checkoutForm.hidden = true;
+    document.getElementById("order-review").hidden = false;
+});
+
+document.getElementById("edit-order-button").addEventListener("click", () => {
+    document.getElementById("order-review").hidden = true;
+    checkoutForm.hidden = false;
+});
+
+document.getElementById("send-order-button").addEventListener("click", async () => {
+    // Open Instagram immediately from the click so the browser does not block the new tab.
+    window.open("https://www.instagram.com/purrfectlybakes_/", "_blank", "noopener,noreferrer");
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(preparedOrderMessage);
+        } else {
+            const temporary = document.createElement("textarea");
+            temporary.value = preparedOrderMessage;
+            temporary.style.position = "fixed";
+            temporary.style.opacity = "0";
+            document.body.appendChild(temporary);
+            temporary.select();
+            document.execCommand("copy");
+            temporary.remove();
+        }
+        document.getElementById("order-review").hidden = true;
+        document.getElementById("order-success").hidden = false;
+    } catch (error) {
+        showToast("Copy failed. Please select and copy the order details manually.");
+    }
+});
+
+document.getElementById("finish-order-button").addEventListener("click", () => {
+    closeCheckout();
+    cart.length = 0;
+    renderCart();
+    showToast("Thank you! Your cart is now cleared.");
+});
+
+// Draw the initial empty cart.
+renderCart();
+
+    </script>
+
+</body>
+</html>
