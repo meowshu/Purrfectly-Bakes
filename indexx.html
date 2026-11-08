@@ -7,11 +7,196 @@
     <meta name="description" content="Freshly baked cakes, crinkles, cookies, and sweet breads from Purrfectly Bakes in Rizal.">
     <title>Purrfectly Bakes | Freshly Baked with Love</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .mid-header { position: sticky; }
+        .cart-checkbox,
+        .checkout-open-checkbox {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+        }
+        .cart-checkbox { left: 50%; }
+        .cart-checkbox:focus-visible ~ .header-actions .cart-toggle,
+        .checkout-open-checkbox:focus-visible ~ .checkout-backdrop {
+            outline: 3px solid #C07828;
+            outline-offset: 3px;
+        }
+        .cart-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 16px;
+            border-radius: 30px;
+            background: #482313;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+        .cart-toggle:hover { background: #FEB960; color: #482313; }
+        .cart-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .cart-dropdown {
+            display: none;
+            position: absolute;
+            z-index: 40;
+            top: calc(100% + 8px);
+            right: 16px;
+            width: min(430px, calc(100vw - 32px));
+        }
+        .cart-checkbox:checked ~ .cart-dropdown { display: block; }
+        .cart-dropdown-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            cursor: default;
+        }
+        .cart-dropdown-panel {
+            position: relative;
+            z-index: 1;
+            max-height: min(75vh, 620px);
+            overflow-y: auto;
+            padding: 16px;
+            border: 1px solid #E0D2C3;
+            border-radius: 10px;
+            background: #F7EFE2;
+            box-shadow: 0 14px 36px rgba(42, 26, 16, .2);
+        }
+        .cart-dropdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #D9CBBC;
+        }
+        .cart-dropdown-header h2 {
+            margin: 0;
+            color: #482313;
+            font: bold 24px Georgia, serif;
+        }
+        .cart-dropdown-header label {
+            color: #482313;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+        .cart-column-headings,
+        .cart-items li {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 72px 66px;
+            align-items: center;
+            gap: 8px;
+        }
+        .cart-column-headings {
+            padding: 12px 2px 7px;
+            color: #806B5B;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .cart-items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .cart-items li {
+            min-height: 48px;
+            padding: 7px 2px;
+            border-top: 1px solid #E2D8CC;
+            color: #482313;
+            font-size: 12px;
+        }
+        .cart-items label { display: block; }
+        .cart-items input {
+            width: 58px;
+            height: 30px;
+            padding: 3px 5px;
+            border: 1px solid #A37233;
+            border-radius: 5px;
+        }
+        .cart-items strong { text-align: right; white-space: nowrap; }
+        .cart-note {
+            display: block;
+            margin-top: 12px;
+            color: #482313;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .cart-note textarea {
+            display: block;
+            width: 100%;
+            min-height: 58px;
+            margin-top: 7px;
+            padding: 8px;
+            border: 1px solid #D9CBBC;
+            border-radius: 7px;
+            font: inherit;
+            font-weight: 400;
+        }
+        .cart-subtotal {
+            display: flex;
+            justify-content: flex-end;
+            gap: 14px;
+            padding: 11px 2px;
+            color: #482313;
+        }
+        .cart-checkout {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 7px;
+            background: #F1D29E;
+            color: #482313;
+            text-align: center;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .checkout-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1998;
+            background: rgba(35, 20, 12, .62);
+            cursor: default;
+        }
+        .checkout-open-checkbox:checked ~ .checkout-backdrop { display: block; }
+        .checkout-open-checkbox:checked ~ #checkout {
+            display: block;
+            animation: popupIn .22s ease forwards;
+        }
+        #close-checkout-label {
+            display: grid;
+            place-items: center;
+        }
+        @media (max-width: 650px) {
+            .cart-dropdown {
+                position: fixed;
+                top: 12px;
+                right: 10px;
+                width: calc(100vw - 20px);
+            }
+            .cart-dropdown-panel { max-height: calc(100vh - 24px); }
+            .cart-items li { grid-template-columns: minmax(0, 1fr) 62px 66px; gap: 5px; }
+        }
+    </style>
     <!-- Visual -->
 
 
 </head>
 <body>
+    <input class="checkout-open-checkbox" type="checkbox" id="checkout-open" aria-label="Checkout">
+    <label class="checkout-backdrop" for="checkout-open" aria-label="Close checkout"></label>
+
     <!-- TOP ANNOUNCEMENT BAR: short store update shown above the navigation. -->
     <div class="top-header">
         <h1>• Fresh Daily Bakes in Angono &amp; Binangonan ✨</h1>
@@ -30,6 +215,7 @@
             <a href="#maps">Find Us</a>
         </nav>
 
+        <input class="cart-checkbox" type="checkbox" id="cart-open" aria-label="Shopping cart">
         <div class="header-actions">
             <div class="header-icons">
                 <a href="https://www.instagram.com/purrfectlybakes_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -39,15 +225,69 @@
                 <a href="#contact" aria-label="Contact us"><img src="pictures/Contact.jpg" alt=""></a>
             </div>
 
-            <button type="button" class="cart-trigger" id="open-cart">
-                🛒 My Cart <span id="cart-count">(0)</span>
-            </button>
+            <label class="cart-toggle" for="cart-open" aria-label="Open shopping cart">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 8H6"></path>
+                    <circle cx="10" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+                My Cart
+            </label>
 
             <!-- LOGIN BUTTON -->
             <div class="Login">
                 <a href="#login">Login</a>
             </div>
         </div>
+
+        <section class="cart-dropdown" id="cart-dropdown" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
+            <label class="cart-dropdown-backdrop" for="cart-open" aria-label="Close cart"></label>
+            <div class="cart-dropdown-panel">
+                <div class="cart-dropdown-header">
+                    <h2 id="cart-heading">Your Cart</h2>
+                    <label for="cart-open" aria-label="Close cart">&times;</label>
+                </div>
+                <div class="cart-column-headings" aria-hidden="true">
+                    <span>Product</span>
+                    <span>Quantity</span>
+                    <span>Price</span>
+                </div>
+                <ul class="cart-items">
+                    <li>
+                        <span>Chocolate Crinkles</span>
+                        <label>
+                            <span class="visually-hidden">Chocolate Crinkles quantity</span>
+                            <input type="number" min="1" value="1" aria-label="Chocolate Crinkles quantity">
+                        </label>
+                        <strong>₱175.00</strong>
+                    </li>
+                    <li>
+                        <span>Red Velvet Crinkles</span>
+                        <label>
+                            <span class="visually-hidden">Red Velvet Crinkles quantity</span>
+                            <input type="number" min="1" value="1" aria-label="Red Velvet Crinkles quantity">
+                        </label>
+                        <strong>₱210.00</strong>
+                    </li>
+                    <li>
+                        <span>Bento Cake</span>
+                        <label>
+                            <span class="visually-hidden">Bento Cake quantity</span>
+                            <input type="number" min="1" value="1" aria-label="Bento Cake quantity">
+                        </label>
+                        <strong>₱349.00</strong>
+                    </li>
+                </ul>
+                <label class="cart-note" for="cart-note">Special order instruction
+                    <textarea id="cart-note" rows="3" placeholder="Add a note for your order"></textarea>
+                </label>
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <strong>₱734.00</strong>
+                </div>
+                <label class="cart-checkout" for="checkout-open">Continue to Checkout</label>
+            </div>
+        </section>
     </header>
 
     <main>
@@ -315,7 +555,7 @@
         </div>
     </div>
 
-    <!-- SHOPPING INTERFACE MARKUP: these controls are visual only without JavaScript. -->
+    <!-- SHOPPING INTERFACE -->
     <!-- Reusable product details popup -->
     <div class="modal-backdrop" id="product-backdrop"></div>
     <section id="product-modal" class="popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-product-name">
@@ -333,22 +573,9 @@
         </div>
     </section>
 
-    <!-- Shopping cart popup -->
-    <section id="cart" class="popup cart-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cart-title">
-        <button type="button" class="modal-close" id="close-cart" aria-label="Close cart">×</button>
-        <p class="eyebrow">YOUR SWEET SELECTION</p>
-        <h2 id="cart-title">My Cart <span class="cart-heading-count" id="cart-heading-count">(0 items)</span></h2>
-        <div id="cart-items"><p class="empty-cart">Your cart is currently empty. Add something sweet!</p></div>
-        <div class="cart-summary">
-            <div><span>Subtotal</span><strong>₱<span id="cart-total">0</span></strong></div>
-            <small>Delivery fee, if applicable, will be confirmed by the shop.</small>
-            <button type="button" id="checkout-button" class="primary-button" disabled>Proceed to Checkout</button>
-        </div>
-    </section>
-
     <!-- Checkout screen -->
-    <section id="checkout" class="popup checkout-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="checkout-title">
-        <button type="button" class="modal-close" id="close-checkout" aria-label="Close checkout">×</button>
+    <section id="checkout" class="popup checkout-popup" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+        <label for="checkout-open" class="modal-close" id="close-checkout-label" aria-label="Close checkout">&times;</label>
         <p class="eyebrow">ALMOST THERE!</p>
         <h2 id="checkout-title">Complete Your Order</h2>
         <p class="checkout-intro">Please provide your details so we can prepare your freshly baked treats.</p>
